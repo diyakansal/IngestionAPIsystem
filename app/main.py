@@ -3,7 +3,8 @@ from app.models import IngestionRequest
 from app.queues import ingestions, add_to_queue
 from app.utils import generate_batches, get_ingestion_status
 from uuid import uuid4
-from app import tasks  # scheduler runs on import
+from app import tasks
+import time
 
 app = FastAPI()
 
